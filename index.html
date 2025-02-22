@@ -7,40 +7,112 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Justin Hawkins Portfolio</h1>
-    </header>
+  <header>
+    <h1>Justin Hawkins Portfolio</h1>
+</header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="resume/Justin-Hawkins-Resume.pdf" target="_blank">Resume</a>
-    </nav>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section class="section" id="about">
-        <h3>About Me</h3>
-        <p>I'm a passionate data professional with expertise in data analysis, machine learning, and Python development.</p>
-        <img src="images/profile.jpg" alt="Justin Hawkins" width="200">
-    </section>
+<section class="section" id="about">
+    <h3>About Me</h3>
+    <p>I'm a passionate data professional with expertise in data analysis, machine learning, and Python development. I focus on transforming complex data into actionable insights through powerful programming techniques and visualizations. Always eager to learn and adapt, I strive to bring innovation and efficiency to every project I work on.</p>
+</section>
 
-    <section class="section" id="projects">
-        <h3>Projects</h3>
-        <div>
-            <h4>Data Visualization Project</h4>
-            <p>Created interactive visualizations to analyze data trends.</p>
-            <img src="images/data-visualization.png" alt="Data Visualization Project" width="300">
-        </div>
-    </section>
+<section class="section" id="projects">
+    <h3>Projects</h3>
 
-    <section class="section" id="contact">
-        <h3>Contact Me</h3>
-        <p>Email: <a href="mailto:Jhawkinses@gmail.com">Jhawkinses@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
-    </section>
+    <div class="interactive-slot">
+        <h4>Data Generator Code</h4>
+        <p>This project is designed to generate synthetic datasets for testing purposes. It simulates real-world data, which allows me to experiment with various data processing techniques before applying them to live data. This mock data has been particularly useful for training models and visualizing patterns in larger datasets.</p>
+        <pre>
+import random
+import pandas as pd
 
-    <footer>
-        <p>&copy; 2025 Justin Hawkins. All rights reserved.</p>
-    </footer>
+# Simulate a diverse dataset with additional attributes
+names = ["Stephen", "Mark", "Ben", "Abby", "Emma", "Olivia", "Liam", "Noah", "Sophia", "Mason"]
+cities = ["New York", "Los Angeles", "Chicago", "Houston", "Miami", "Dallas", "Austin", "San Francisco"]
+departments = ["Engineering", "Marketing", "Sales", "Finance", "HR", "Product Development"]
+
+data = []
+for _ in range(800):
+entry = {
+    "Name": random.choice(names),
+    "Age": random.randint(18, 60),
+    "Score": random.randint(50, 100),
+    "City": random.choice(cities),
+    "Department": random.choice(departments),
+    "Experience": random.randint(1, 30),
+    "Salary": random.randint(40000, 120000),
+    "Gender": random.choice(["Male", "Female", "Non-binary"]),
+    "Is_Manager": random.choice([True, False]),
+    "Date_of_Joining": f"202{random.randint(0,9)}-{random.randint(1,12):02d}-{random.randint(1,28):02d}"
+}
+data.append(entry)
+
+df = pd.DataFrame(data)
+df.to_csv("mock_data_extended.csv", index=False)
+print("Mock data saved to mock_data_extended.csv")
+        </pre>
+    </div>
+
+    <div class="interactive-slot">
+        <h4>Data Visualization Code</h4>
+        <p>This project demonstrates how data visualization can provide insights into the underlying structure of data. By leveraging libraries like Matplotlib and NumPy, I created interactive charts to help better understand data distributions, correlations, and trends over time.</p>
+        <pre>
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Simulate data for visualizations
+names = ["David", "Antonio", "Nolan", "Ashton", "Bethany", "Lily", "Ethan", "Isabella"]
+scores = [random.randint(50, 100) for _ in names]
+age = [random.randint(18, 60) for _ in names]
+department = ["Engineering", "Marketing", "Sales", "Finance", "HR", "Product Development"]
+
+# Bar chart for scores
+plt.figure(figsize=(14, 7))
+plt.bar(names, scores, color=np.random.rand(len(names), 3))
+plt.xlabel("Names")
+plt.ylabel("Scores")
+plt.title("Randomly Generated Scores")
+plt.xticks(rotation=90)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+# Scatter plot for age vs score
+plt.figure(figsize=(10, 6))
+plt.scatter(age, scores, alpha=0.6, c=np.random.rand(len(names), 3))
+plt.xlabel("Age")
+plt.ylabel("Scores")
+plt.title("Age vs Scores")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+        </pre>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h3>Contact Me</h3>
+    <p>I'd love to hear from you! Whether it's a collaboration, question, or feedback, feel free to reach out via the following:</p>
+    <p>Email: <a href="mailto:Jhawkinses@gmail.com">Jhawkinses@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins-3399282a0/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
+</section>
+
+<div class="cta-section">
+    <p>Ready to work together? Let's create something amazing!</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Justin Hawkins. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="#about">About</a> | <a href="#projects">Projects</a> | <a href="#contact">Contact</a>
+    </div>
+</footer>
 </body>
 </html>

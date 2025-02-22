@@ -1,43 +1,118 @@
+:root {
+    --primary-color: #006400;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #f4f4f4;
+    --highlight-color: #ffcc00;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
 }
 
 header {
-    background-color: #002064;
-    color: white;
-    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
 }
 
 nav a {
     text-decoration: none;
-    color: #006400;
+    color: var(--primary-color);
     font-weight: bold;
-    margin: 0 15px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: var(--highlight-color);
 }
 
 .section {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--accent-color);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-img {
+h3, h4 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+pre {
+    background-color: #f8f8f8;
+    padding: 1rem;
     border-radius: 8px;
-    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: var(--highlight-color);
+}
+
+.interactive-slot {
+    margin-bottom: 2rem;
+}
+
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
+.cta-section p {
+    font-size: 1.3rem;
 }
