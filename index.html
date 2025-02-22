@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
+    <title>Justin Hawkins Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Justin Hawkins Portfolio</h1>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="resume/Justin-Hawkins-Resume.pdf" target="_blank">Resume</a>
     </nav>
-    <script src="index.js"></script>
-  </body>
+
+    <section class="section" id="about">
+        <h3>About Me</h3>
+        <p>I'm a passionate data professional with expertise in data analysis, machine learning, and Python development.</p>
+        <img src="images/profile.jpg" alt="Justin Hawkins" width="200">
+    </section>
+
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+        <div>
+            <h4>Data Visualization Project</h4>
+            <p>Created interactive visualizations to analyze data trends.</p>
+            <img src="images/data-visualization.png" alt="Data Visualization Project" width="300">
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:Jhawkinses@gmail.com">Jhawkinses@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Justin Hawkins. All rights reserved.</p>
+    </footer>
+</body>
 </html>
